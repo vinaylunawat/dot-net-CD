@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: crossplane-resources
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/awst-global/api.awst.io-environment.git
+    targetRevision: HEAD
+    path: environments/dev/cluster/crossplane
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: crossplane-system
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+
+    automated:
+      selfHeal: true
+      prune: true

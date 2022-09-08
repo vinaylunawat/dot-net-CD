@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+patchesStrategicMerge:
+- deployment.yaml
+resources:
+- ../../../../base/apps/guestbook/
+images:
+- name: nanajanashia/argocd-app:1.3
+  newTag: 5f7001eb300962a6a7bc1dd6d06c59742e5229e0
