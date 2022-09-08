@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://git.rfldev.com/cloud-practice/devops-libraries-and-frameworks/
+    repoURL: https://github.com/techvishal1988/reflections-cloud-practice.git
     targetRevision: HEAD
     path: environments/dev/apps/guestbook/
   destination: 
