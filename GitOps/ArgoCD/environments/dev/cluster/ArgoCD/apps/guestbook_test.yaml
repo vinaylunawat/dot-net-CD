@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/techvishal1988/reflections-cloud-practice.git
     targetRevision: HEAD
-    path: GitOps/ArgoCD/environments/dev/apps/guestbook/
+    path: GitOps/ArgoCD/environments/dev/apps/guestbook_test/
   destination: 
     server: https://kubernetes.default.svc
     namespace: dev
