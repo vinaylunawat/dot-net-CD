@@ -14,7 +14,8 @@ https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/
 Below is the sample Base folder structure of GitOps Strategy:
 
 
- ![argoCapture](/uploads/dd31b2bc187631c5dd87a6fb7055fa0b/argoCapture.PNG)
+ ![argoCapture](https://user-images.githubusercontent.com/104866564/189586603-9a98998c-2a79-45a3-a8d5-c6c9aa0bb621.PNG)
+
 
 1.	environments:
 The environments represents the different development platforms like Dev, QA, Prod. In each environments, we have two different folders: 1. Cluster 2. Apps
@@ -33,7 +34,8 @@ Here, we create the folder according to the microservices we have in our environ
 
 
  
-![kuzCapture](/uploads/b060eba75a8b63d25d48784be35eb5d8/kuzCapture.PNG)
+![kuzCapture](https://user-images.githubusercontent.com/104866564/189586740-6ed232a9-1303-49b0-83cd-8d5ad109484a.PNG)
+
 
 
 
