@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: project-demo
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/techvishal1988/reflections-cloud-practice.git
+    targetRevision: HEAD
+    path: GitOps/ArgoCD/environments/dev/apps/project-demo/
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: dev
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
