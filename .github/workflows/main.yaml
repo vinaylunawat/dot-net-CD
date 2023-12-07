@@ -1,0 +1,47 @@
+name: CD
+# Controls when the workflow will run
+# workflow_dispatch:
+on:
+
+  repository_dispatch:
+    inputs:
+      image_name:
+        required: true
+      image_tag:
+        required: true
+      app_repo:
+        required: true
+      env_name:
+        required: true
+
+
+jobs:
+  build:
+    name: Build and Pushing the Image
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Updating Deployment file
+      run: |
+        IMAGE_ID=${{ github.event.client_payload.image_name }}
+        echo $IMAGE_ID
+        IMAGE_TAG=${{ github.event.client_payload.image_tag }}
+        echo $IMAGE_TAG
+        APP_REPO=${{ github.event.client_payload.app_repo }}
+        echo $APP_REPO
+        image=${{ github.event.client_payload.image }}
+        ENV_NAME=${{ github.event.client_payload.env_name }}
+        echo $ENV_NAME
+        cd /home/runner/work/gitops-application-environment/gitops-application-environment/GitOps/ArgoCD/environments/$ENV_NAME/apps/$APP_REPO/
+        kustomize edit set image $IMAGE_ID:$IMAGE_TAG
+    - name: Commiting deployment file changes
+    
+      run: |
+        git config --global user.email "dev@demo.com"
+        git config --global user.name "demodev"
+        git add .
+        git commit -m "Update ${{ github.event.client_payload.ENV_NAME }} ${{ github.event.client_payload.APP_NAME }} to new version"
+        git push   
