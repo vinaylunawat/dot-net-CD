@@ -35,8 +35,9 @@ jobs:
         image=${{ github.event.client_payload.image }}
         ENV_NAME=${{ github.event.client_payload.env_name }}
         echo $ENV_NAME
+        pwd
         ls
-        cd /home/runner/work/dot-net-CD/GitOps/ArgoCD/environments/$ENV_NAME/apps/$APP_REPO/
+        cd /home/runner/work/dot-net-CD/dot-net-CD/GitOps/ArgoCD/environments/$ENV_NAME/apps/$APP_REPO/
         kustomize edit set image $IMAGE_ID:$IMAGE_TAG
     - name: Commiting deployment file changes
     
