@@ -6,4 +6,4 @@ resources:
 - ../../../../base/apps/guestbook/
 images:
 - name: 485229547579.dkr.ecr.us-west-2.amazonaws.com/demo-ecr
-  newTag: 420729035d6c7fb66dfd9a7e1cb34c721c1ea488
+  newTag: ac74e4e7a0d54d1001c931a5a5172c2c1f875509
