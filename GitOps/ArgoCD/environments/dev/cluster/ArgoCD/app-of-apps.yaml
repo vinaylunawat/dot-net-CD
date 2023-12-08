@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/techvishal1988/reflections-cloud-practice.git
+    repoURL: https://github.com/techvishal1988/dot-net-CD.git
     targetRevision: HEAD
     path: GitOps/ArgoCD/environments/dev/cluster/ArgoCD/apps
   destination: 
