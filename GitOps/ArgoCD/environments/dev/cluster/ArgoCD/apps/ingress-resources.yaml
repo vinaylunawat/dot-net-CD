@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/techvishal1988/dot-net-CD.git
     targetRevision: HEAD
-    path: environments/dev/cluster/ingress/
+    path: GitOps/ArgoCD/environments/dev/cluster/ingress/
   destination: 
     server: https://kubernetes.default.svc
     namespace: dev
