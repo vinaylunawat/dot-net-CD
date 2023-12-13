@@ -7,3 +7,5 @@ resources:
 images:
 - name: 485229547579.dkr.ecr.us-west-2.amazonaws.com/demo-ecr
   newTag: 675b216e683b2e836807ee9be1dfc44379b47108
+- name: 751111534101.dkr.ecr.us-west-2.amazonaws.com/demo-ecr
+  newTag: c25263e268a3b3c7ac3869cf52a8c948d769f4ff
