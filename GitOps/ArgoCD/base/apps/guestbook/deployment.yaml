@@ -16,5 +16,8 @@ spec:
       containers:
       - image: 751111534101.dkr.ecr.us-west-2.amazonaws.com/demo-ecr:917f3425e3def220d74e9d230a8ac0065b4ee0a2
         name: guestbook-ui
+        env:
+          - name: ConnectionStrings__BikeStoresDB
+            value: databaseconnectionstring
         ports:
         - containerPort: 80
