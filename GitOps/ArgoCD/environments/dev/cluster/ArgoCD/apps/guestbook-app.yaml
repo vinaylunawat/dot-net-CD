@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/techvishal1988/dot-net-CD.git
+    repoURL: https://github.com/vinaylunawat/dot-net-CD.git
     targetRevision: HEAD
     path: GitOps/ArgoCD/environments/dev/apps/guestbook/
   destination: 
