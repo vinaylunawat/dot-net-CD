@@ -18,6 +18,9 @@ spec:
         name: guestbook-ui
         env:
           - name: ConnectionStrings__BikeStoresDB
-            value: databaseconnectionstring
+            valueFrom:
+              secretKeyRef:
+                name: bikestoresecret
+                key: databaseconnectionstring
         ports:
         - containerPort: 80
