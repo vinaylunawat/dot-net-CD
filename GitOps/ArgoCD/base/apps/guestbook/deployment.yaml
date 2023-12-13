@@ -18,6 +18,6 @@ spec:
         name: guestbook-ui
         env:
           - name: ConnectionStrings__BikeStoresDB
-            value: Data Source=bikestores.c4puznz318vl.us-west-2.rds.amazonaws.com,1433;Initial Catalog=BikeStores;Persist Security Info=False;User ID=admin;Password=admin123;
+            value: databaseconnectionstring
         ports:
         - containerPort: 80
